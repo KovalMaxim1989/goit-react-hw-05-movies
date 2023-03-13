@@ -1,7 +1,15 @@
-export default function Movies() {
+import { NavLink } from 'react-router-dom';
+
+export default function MoviesList({ movies }) {
   return (
-    <div>
-      <h1>Movies</h1>
-    </div>
+    <ul>
+      {movies.map(movie => (
+        <li key={movie.id}>
+          <NavLink to={`/movies/${movie.id}`}>
+            {movie.original_title ?? movie.name}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
   );
 }
