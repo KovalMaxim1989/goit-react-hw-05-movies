@@ -23,3 +23,10 @@ export async function getTrendMovies(query) {
       
     return movies.data.results;
 }
+
+export async function getMoviesDetailsById(id) { 
+    const movies = await agent.get(`movie/${id}`)
+      
+    return movies.data;
+}
+
