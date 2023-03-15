@@ -1,16 +1,17 @@
-import { Dna } from 'react-loader-spinner';
+import { Vortex } from 'react-loader-spinner';
 import { LoaderStyled } from './Loader.styled';
 
 const Loader = () => {
   return (
     <LoaderStyled>
-      <Dna
+      <Vortex
         visible={true}
-        height="80"
-        width="80"
-        ariaLabel="dna-loading"
+        height="200"
+        width="200"
+        ariaLabel="vortex-loading"
         wrapperStyle={{}}
-        wrapperClass="dna-wrapper"
+        wrapperClass="vortex-wrapper"
+        colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
       />
     </LoaderStyled>
   );
