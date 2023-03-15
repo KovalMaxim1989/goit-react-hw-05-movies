@@ -1,12 +1,12 @@
-import { getTrendMovies } from 'services/api';
+import { getTrendingMovies } from 'services/api';
 import { useEffect, useState } from 'react';
-import MoviesList from 'components/MoviesList';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    getTrendMovies().then(setMovies);
+    getTrendingMovies().then(setMovies);
   }, []);
 
   return (
